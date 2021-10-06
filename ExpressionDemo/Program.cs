@@ -17,14 +17,14 @@ namespace ExpressionDemo
 			sw.Start();
 			var method = IsLengthGreaterThanFourExpression();
 			sw.Stop();
-			Console.WriteLine($"Elapsed on compiling for the first time: {sw.Elapsed} sec.");
+			Console.WriteLine($"Elapsed on compiling the expression for the first time: {sw.Elapsed} sec.");
 
 			//Compiling second time
 			sw.Reset();
 			sw.Start();
 			var method1 = IsLengthGreaterThanFourExpression();
 			sw.Stop();
-			Console.WriteLine($"Elapsed on compiling for the first time: {sw.Elapsed} sec.");
+			Console.WriteLine($"Elapsed on compiling the expression for second time: {sw.Elapsed} sec.");
 
 
 			Console.WriteLine("\n---------------------------------------------");
@@ -43,6 +43,7 @@ namespace ExpressionDemo
 				sw.Start();
 				var result2 = method("Rafo");
 				sw.Stop();
+				Console.WriteLine("Calling the already compiled expression method");
 				Console.WriteLine($"Elapsed time in milliseconds: {sw.Elapsed}");
 
 				Console.WriteLine("\n\n\n");
